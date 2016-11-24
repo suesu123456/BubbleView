@@ -12,6 +12,9 @@
 		185758081DE6CE2700E8619A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185758061DE6CE2700E8619A /* Main.storyboard */; };
 		1857580A1DE6CE2700E8619A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185758091DE6CE2700E8619A /* Assets.xcassets */; };
 		1857580D1DE6CE2700E8619A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1857580B1DE6CE2700E8619A /* LaunchScreen.storyboard */; };
+		185758191DE6CE8B00E8619A /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185758151DE6CE8B00E8619A /* BubbleView.swift */; };
+		1857581A1DE6CE8B00E8619A /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 185758171DE6CE8B00E8619A /* UIColor+HexString.m */; };
+		1857581B1DE6CE8B00E8619A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185758181DE6CE8B00E8619A /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,11 @@
 		185758091DE6CE2700E8619A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1857580C1DE6CE2700E8619A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1857580E1DE6CE2700E8619A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		185758141DE6CE8A00E8619A /* BubbleView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BubbleView-Bridging-Header.h"; sourceTree = "<group>"; };
+		185758151DE6CE8B00E8619A /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
+		185758161DE6CE8B00E8619A /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		185758171DE6CE8B00E8619A /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		185758181DE6CE8B00E8619A /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +62,17 @@
 		185758011DE6CE2700E8619A /* BubbleView */ = {
 			isa = PBXGroup;
 			children = (
+				185758151DE6CE8B00E8619A /* BubbleView.swift */,
+				185758161DE6CE8B00E8619A /* UIColor+HexString.h */,
+				185758171DE6CE8B00E8619A /* UIColor+HexString.m */,
+				185758181DE6CE8B00E8619A /* UIView.swift */,
 				185758021DE6CE2700E8619A /* AppDelegate.swift */,
 				185758041DE6CE2700E8619A /* ViewController.swift */,
 				185758061DE6CE2700E8619A /* Main.storyboard */,
 				185758091DE6CE2700E8619A /* Assets.xcassets */,
 				1857580B1DE6CE2700E8619A /* LaunchScreen.storyboard */,
 				1857580E1DE6CE2700E8619A /* Info.plist */,
+				185758141DE6CE8A00E8619A /* BubbleView-Bridging-Header.h */,
 			);
 			path = BubbleView;
 			sourceTree = "<group>";
@@ -96,6 +109,8 @@
 				TargetAttributes = {
 					185757FE1DE6CE2700E8619A = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 6N94H8YMSJ;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,7 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1857581B1DE6CE8B00E8619A /* UIView.swift in Sources */,
+				185758191DE6CE8B00E8619A /* BubbleView.swift in Sources */,
 				185758051DE6CE2700E8619A /* ViewController.swift in Sources */,
+				1857581A1DE6CE8B00E8619A /* UIColor+HexString.m in Sources */,
 				185758031DE6CE2700E8619A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,10 +278,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 6N94H8YMSJ;
 				INFOPLIST_FILE = BubbleView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wandiege.BubbleView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BubbleView/BubbleView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -272,10 +294,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = 6N94H8YMSJ;
 				INFOPLIST_FILE = BubbleView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wandiege.BubbleView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "BubbleView/BubbleView-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
