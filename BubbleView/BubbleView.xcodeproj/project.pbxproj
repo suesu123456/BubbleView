@@ -15,6 +15,9 @@
 		185758191DE6CE8B00E8619A /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185758151DE6CE8B00E8619A /* BubbleView.swift */; };
 		1857581A1DE6CE8B00E8619A /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 185758171DE6CE8B00E8619A /* UIColor+HexString.m */; };
 		1857581B1DE6CE8B00E8619A /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185758181DE6CE8B00E8619A /* UIView.swift */; };
+		80810FC61DEC59B9005E8DEF /* InnerShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80810FC51DEC59B9005E8DEF /* InnerShadow.swift */; };
+		80810FCB1DEC6750005E8DEF /* YIInnerShadowLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 80810FC81DEC6750005E8DEF /* YIInnerShadowLayer.m */; };
+		80810FCC1DEC6750005E8DEF /* YIInnerShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80810FCA1DEC6750005E8DEF /* YIInnerShadowView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,11 @@
 		185758161DE6CE8B00E8619A /* UIColor+HexString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
 		185758171DE6CE8B00E8619A /* UIColor+HexString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
 		185758181DE6CE8B00E8619A /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		80810FC51DEC59B9005E8DEF /* InnerShadow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InnerShadow.swift; sourceTree = "<group>"; };
+		80810FC71DEC6750005E8DEF /* YIInnerShadowLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YIInnerShadowLayer.h; sourceTree = "<group>"; };
+		80810FC81DEC6750005E8DEF /* YIInnerShadowLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YIInnerShadowLayer.m; sourceTree = "<group>"; };
+		80810FC91DEC6750005E8DEF /* YIInnerShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YIInnerShadowView.h; sourceTree = "<group>"; };
+		80810FCA1DEC6750005E8DEF /* YIInnerShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YIInnerShadowView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,10 @@
 		185758011DE6CE2700E8619A /* BubbleView */ = {
 			isa = PBXGroup;
 			children = (
+				80810FC71DEC6750005E8DEF /* YIInnerShadowLayer.h */,
+				80810FC81DEC6750005E8DEF /* YIInnerShadowLayer.m */,
+				80810FC91DEC6750005E8DEF /* YIInnerShadowView.h */,
+				80810FCA1DEC6750005E8DEF /* YIInnerShadowView.m */,
 				185758151DE6CE8B00E8619A /* BubbleView.swift */,
 				185758161DE6CE8B00E8619A /* UIColor+HexString.h */,
 				185758171DE6CE8B00E8619A /* UIColor+HexString.m */,
@@ -73,6 +85,7 @@
 				1857580B1DE6CE2700E8619A /* LaunchScreen.storyboard */,
 				1857580E1DE6CE2700E8619A /* Info.plist */,
 				185758141DE6CE8A00E8619A /* BubbleView-Bridging-Header.h */,
+				80810FC51DEC59B9005E8DEF /* InnerShadow.swift */,
 			);
 			path = BubbleView;
 			sourceTree = "<group>";
@@ -151,9 +164,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80810FC61DEC59B9005E8DEF /* InnerShadow.swift in Sources */,
 				1857581B1DE6CE8B00E8619A /* UIView.swift in Sources */,
 				185758191DE6CE8B00E8619A /* BubbleView.swift in Sources */,
 				185758051DE6CE2700E8619A /* ViewController.swift in Sources */,
+				80810FCB1DEC6750005E8DEF /* YIInnerShadowLayer.m in Sources */,
+				80810FCC1DEC6750005E8DEF /* YIInnerShadowView.m in Sources */,
 				1857581A1DE6CE8B00E8619A /* UIColor+HexString.m in Sources */,
 				185758031DE6CE2700E8619A /* AppDelegate.swift in Sources */,
 			);
@@ -324,6 +340,7 @@
 				185758131DE6CE2700E8619A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

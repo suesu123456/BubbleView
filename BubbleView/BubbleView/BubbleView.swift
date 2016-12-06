@@ -110,6 +110,7 @@ class BubbleView: UIView {
             vw.isHidden = false
         }, completion: {(finished: Bool) in
             vw.startPulseWith(color: UIColor.white, offset: CGSize(width: 4, height: 3), frequency: 2, borderColor: color)
+            vw.addInnerShadow()
             self.bubbleIndex += 1
         });
     }
@@ -130,16 +131,24 @@ class BubbleView: UIView {
         let ani2 = CABasicAnimation(keyPath: "opacity")
         ani2.fromValue = 0.5
         ani2.toValue = 0
-        ani2.isRemovedOnCompletion = false
-        ani2.fillMode = kCAFillModeForwards
-        ani2.duration = 1
-        v.layer.add(ani2, forKey: nil)
+        
+        let ani3 = CABasicAnimation(keyPath: "transform.scale")
+        ani3.fromValue = 1
+        ani3.toValue = 1.5
+        
+        let group = CAAnimationGroup()
+        group.animations = [ani2, ani3]
+        group.duration = 1
+        group.fillMode = kCAFillModeForwards
+        group.isRemovedOnCompletion = false
+        v.layer.add(group, forKey: nil)
+        
         //放射动画
         var emitter: CAEmitterLayer!
         if v.layer.sublayers?.count == 2 {
-            emitter = v.layer.sublayers![1] as! CAEmitterLayer
+            emitter = v.layer.sublayers![2] as! CAEmitterLayer
         }else{
-             emitter = v.layer.sublayers![0] as! CAEmitterLayer
+             emitter = v.layer.sublayers![1] as! CAEmitterLayer
         }
         emitter.beginTime = CACurrentMediaTime();
         let ani = CABasicAnimation(keyPath:"emitterCells.explosion.birthRate")
